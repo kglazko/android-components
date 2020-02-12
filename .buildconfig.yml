@@ -1,4 +1,4 @@
-componentsVersion: 32.0.0
+componentsVersion: 32.0.0-SNAPSHOT
 projects:
   concept-awesomebar:
     path: components/concept/awesomebar

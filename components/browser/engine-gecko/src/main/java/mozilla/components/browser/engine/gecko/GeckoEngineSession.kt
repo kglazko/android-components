@@ -445,7 +445,7 @@ class GeckoEngineSession(
             }
 
             notifyObservers {
-                onSecurityChange(securityInfo.isSecure, securityInfo.host, getIssuerName(securityInfo.issuerOrganization))
+                onSecurityChange(securityInfo.isSecure, securityInfo.host, securityInfo.issuerCommonName)
             }
         }
 
@@ -734,9 +734,9 @@ class GeckoEngineSession(
         return cookiesPolicies
     }
 
-    internal fun GeckoSession.ProgressDelegate.SecurityInformation.getIssuerName(issuerName: String): String {
+    /*internal fun GeckoSession.ProgressDelegate.SecurityInformation.getIssuerName(issuerName: String): String {
         return issuerName.substringAfterLast("O=").substringBeforeLast(",C=")
-    }
+    }*/
 
     private operator fun Int.contains(mask: Int): Boolean {
         return (this and mask) != 0
